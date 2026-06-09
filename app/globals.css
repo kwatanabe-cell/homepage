@@ -710,7 +710,7 @@ body.light-theme .button.ghost{
 }
 body.light-theme .page-hero::before{
   background:
-    linear-gradient(90deg,rgba(244,241,234,.96),rgba(244,241,234,.74) 52%,rgba(244,241,234,.38)),
+    linear-gradient(90deg,rgba(11,13,16,.94),rgba(11,13,16,.68) 52%,rgba(11,13,16,.3)),
     url("/assets/hero-earth-cubesat.png") right center / cover no-repeat;
 }
 .recruit-hero::before{
@@ -720,8 +720,37 @@ body.light-theme .page-hero::before{
 }
 body.light-theme .recruit-hero::before{
   background:
-    linear-gradient(90deg,rgba(244,241,234,.94),rgba(244,241,234,.6) 56%,rgba(244,241,234,.34)),
+    linear-gradient(90deg,rgba(11,13,16,.94),rgba(11,13,16,.62) 56%,rgba(11,13,16,.28)),
     url("/assets/kitakyushu-manufacturing.png") center / cover no-repeat;
+}
+body.light-theme .kv,
+body.light-theme .page-hero,
+body.light-theme .recruit-hero{
+  color:#f4f1ea;
+}
+body.light-theme .kv .lead,
+body.light-theme .page-hero .lead,
+body.light-theme .recruit-hero .lead{
+  color:rgba(244,241,234,.82);
+}
+body.light-theme .kv .eyebrow,
+body.light-theme .page-hero .eyebrow,
+body.light-theme .recruit-hero .eyebrow{
+  color:var(--accent);
+}
+body.light-theme .kv .button.primary,
+body.light-theme .page-hero .button.primary,
+body.light-theme .recruit-hero .button.primary{
+  background:#f4f1ea;
+  border-color:#f4f1ea;
+  color:#0b0d10;
+}
+body.light-theme .kv .button.ghost,
+body.light-theme .page-hero .button.ghost,
+body.light-theme .recruit-hero .button.ghost{
+  background:rgba(11,13,16,.2);
+  border-color:rgba(244,241,234,.38);
+  color:#f4f1ea;
 }
 .message-photo,
 .interview-photo,
