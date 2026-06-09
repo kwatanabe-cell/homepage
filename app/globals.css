@@ -437,8 +437,8 @@ body.light-theme .message-photo{border-color:rgba(7,17,31,.16)}
 .news-list{display:grid;gap:14px;margin-top:36px}
 .news-list article{
   display:grid;
-  grid-template-columns:180px 132px minmax(0,1fr) minmax(220px,.9fr);
-  gap:22px;
+  grid-template-columns:180px 132px minmax(520px,1fr) 80px;
+  gap:18px;
   align-items:start;
   padding:24px;
   border:1px solid transparent;
