@@ -8,6 +8,8 @@ export function ClientBehavior() {
     const navToggle = document.getElementById("navToggle");
     const globalNav = document.getElementById("globalNav");
     const savedTheme = window.localStorage.getItem("kst-theme");
+    const langButtons = Array.from(document.querySelectorAll<HTMLButtonElement>("[data-media-lang]"));
+    const translatable = Array.from(document.querySelectorAll<HTMLElement>("[data-ja][data-en]"));
 
     if (savedTheme === "light") {
       document.body.classList.add("light-theme");
@@ -51,6 +53,25 @@ export function ClientBehavior() {
       navToggle?.setAttribute("aria-expanded", "false");
     };
 
+    const setMediaLanguage = (lang: "ja" | "en") => {
+      translatable.forEach((element) => {
+        element.textContent = element.dataset[lang] ?? element.textContent;
+      });
+      langButtons.forEach((button) => {
+        const isActive = button.dataset.mediaLang === lang;
+        button.classList.toggle("active", isActive);
+        button.setAttribute("aria-pressed", String(isActive));
+      });
+      document.documentElement.lang = lang === "ja" ? "ja" : "en";
+      window.localStorage.setItem("kst-media-lang", lang);
+    };
+
+    const onLanguageClick = (event: Event) => {
+      const button = event.currentTarget as HTMLButtonElement;
+      const lang = button.dataset.mediaLang === "en" ? "en" : "ja";
+      setMediaLanguage(lang);
+    };
+
     const onFormSubmit = (event: Event) => {
       event.preventDefault();
       const form = event.currentTarget as HTMLFormElement;
@@ -65,8 +86,13 @@ export function ClientBehavior() {
 
     syncThemeLabel();
     onScroll();
+    if (langButtons.length && translatable.length) {
+      const savedLanguage = window.localStorage.getItem("kst-media-lang") === "en" ? "en" : "ja";
+      setMediaLanguage(savedLanguage);
+    }
 
     themeToggle?.addEventListener("click", onThemeClick);
+    langButtons.forEach((button) => button.addEventListener("click", onLanguageClick));
     window.addEventListener("scroll", onScroll);
     navToggle?.addEventListener("click", onNavClick);
     globalNav?.querySelectorAll("a").forEach((link) => link.addEventListener("click", closeNav));
@@ -76,6 +102,7 @@ export function ClientBehavior() {
 
     return () => {
       themeToggle?.removeEventListener("click", onThemeClick);
+      langButtons.forEach((button) => button.removeEventListener("click", onLanguageClick));
       window.removeEventListener("scroll", onScroll);
       navToggle?.removeEventListener("click", onNavClick);
       globalNav?.querySelectorAll("a").forEach((link) => link.removeEventListener("click", closeNav));

@@ -336,6 +336,41 @@ body.light-theme .message-photo{border-color:rgba(7,17,31,.16)}
   letter-spacing:.12em;
   text-transform:uppercase;
 }
+.media-meta-row{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:24px;
+  margin-bottom:18px;
+}
+.media-meta-row .media-kicker{
+  margin:0;
+}
+.media-lang-switch{
+  display:flex;
+  align-items:center;
+  gap:4px;
+  border:1px solid rgba(18,20,23,.24);
+  padding:4px;
+  background:rgba(255,255,255,.42);
+}
+.media-lang-switch button{
+  appearance:none;
+  border:0;
+  background:transparent;
+  color:#4b535a;
+  min-width:42px;
+  height:34px;
+  padding:0 10px;
+  font:inherit;
+  font-size:13px;
+  font-weight:900;
+  cursor:pointer;
+}
+.media-lang-switch button.active{
+  background:#121417;
+  color:#f4f1ea;
+}
 .media-masthead h1{
   max-width:980px;
   margin:0;
@@ -678,6 +713,7 @@ textarea{resize:vertical}.contact-form .button{width:100%;margin-top:8px}
   .recruit-hero h1{font-size:clamp(36px,11vw,54px);max-width:9.5em}
   .media-masthead{padding:116px 22px 42px}
   .media-masthead h1{font-size:clamp(42px,14vw,64px)}
+  .media-meta-row{align-items:flex-start;flex-direction:column}
   .media-front,
   .media-latest{padding-inline:22px}
   .media-front{padding-block:38px 22px}

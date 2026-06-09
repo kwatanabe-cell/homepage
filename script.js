@@ -2,6 +2,8 @@ const header = document.getElementById('siteHeader');
 const navToggle = document.getElementById('navToggle');
 const globalNav = document.getElementById('globalNav');
 const savedTheme = localStorage.getItem('kst-theme');
+const langButtons = Array.from(document.querySelectorAll('[data-media-lang]'));
+const translatable = Array.from(document.querySelectorAll('[data-ja][data-en]'));
 
 if (savedTheme === 'light') {
   document.body.classList.add('light-theme');
@@ -47,6 +49,30 @@ if (navToggle && globalNav) {
     link.addEventListener('click', () => {
       globalNav.classList.remove('open');
       navToggle.setAttribute('aria-expanded', 'false');
+    });
+  });
+}
+
+if (langButtons.length && translatable.length) {
+  const setMediaLanguage = (lang) => {
+    translatable.forEach((element) => {
+      element.textContent = element.dataset[lang] || element.textContent;
+    });
+    langButtons.forEach((button) => {
+      const isActive = button.dataset.mediaLang === lang;
+      button.classList.toggle('active', isActive);
+      button.setAttribute('aria-pressed', String(isActive));
+    });
+    document.documentElement.lang = lang === 'ja' ? 'ja' : 'en';
+    localStorage.setItem('kst-media-lang', lang);
+  };
+
+  const savedLanguage = localStorage.getItem('kst-media-lang') === 'en' ? 'en' : 'ja';
+  setMediaLanguage(savedLanguage);
+
+  langButtons.forEach((button) => {
+    button.addEventListener('click', () => {
+      setMediaLanguage(button.dataset.mediaLang === 'en' ? 'en' : 'ja');
     });
   });
 }
