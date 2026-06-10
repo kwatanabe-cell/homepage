@@ -522,16 +522,20 @@ body.light-theme .message-photo{border-color:rgba(7,17,31,.16)}
 }
 .orbit-topbar{
   display:grid;
-  grid-template-columns:auto minmax(0,1fr) auto;
-  gap:28px;
+  grid-template-columns:minmax(0,1fr) auto;
+  grid-template-areas:
+    "brand actions"
+    "nav nav";
+  gap:18px 28px;
   align-items:center;
-  padding:8px 0 20px;
+  padding:8px 0 24px;
 }
 .orbit-brand{
+  grid-area:brand;
   display:flex;
   align-items:center;
   gap:16px;
-  min-width:300px;
+  min-width:0;
 }
 .orbit-mark{
   position:relative;
@@ -575,9 +579,13 @@ body.light-theme .message-photo{border-color:rgba(7,17,31,.16)}
   letter-spacing:.42em;
 }
 .orbit-nav{
+  grid-area:nav;
   display:flex;
-  justify-content:center;
-  gap:clamp(16px,2.2vw,36px);
+  justify-content:flex-start;
+  flex-wrap:wrap;
+  gap:clamp(18px,3vw,48px);
+  border-top:1px solid rgba(122,174,215,.18);
+  padding-top:18px;
   color:#dbe6f7;
   font-size:13px;
   font-weight:900;
@@ -586,9 +594,12 @@ body.light-theme .message-photo{border-color:rgba(7,17,31,.16)}
 }
 .orbit-nav a{white-space:nowrap}
 .orbit-actions{
+  grid-area:actions;
   display:flex;
   align-items:center;
   gap:10px;
+  justify-content:flex-end;
+  min-width:0;
 }
 .orbit-press .media-lang-switch{
   border-color:rgba(95,155,190,.45);
@@ -605,7 +616,8 @@ body.light-theme .message-photo{border-color:rgba(7,17,31,.16)}
   display:flex;
   align-items:center;
   gap:10px;
-  min-width:240px;
+  width:clamp(260px,28vw,450px);
+  min-width:0;
   height:44px;
   padding:0 14px;
   border:1px solid rgba(95,155,190,.45);
@@ -1019,7 +1031,14 @@ textarea{resize:vertical}.contact-form .button{width:100%;margin-top:8px}
   .media-digest{border-top-width:1px}
   .media-feed a{grid-template-columns:180px minmax(0,1fr)}
   .orbit-press{padding-top:112px}
-  .orbit-topbar{grid-template-columns:1fr;gap:18px}
+  .orbit-topbar{
+    grid-template-columns:1fr;
+    grid-template-areas:
+      "brand"
+      "actions"
+      "nav";
+    gap:18px;
+  }
   .orbit-brand{min-width:0}
   .orbit-nav{justify-content:flex-start;overflow-x:auto;padding-bottom:4px}
   .orbit-actions{justify-content:space-between}
