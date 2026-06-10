@@ -684,6 +684,14 @@ body.light-theme .message-photo{border-color:rgba(7,17,31,.16)}
   color:#aab8c8;
   font-size:14px;
 }
+.orbit-source-link{
+  display:inline-flex;
+  margin-top:14px;
+  color:#4db0ff;
+  font-size:13px;
+  font-weight:900;
+  letter-spacing:.06em;
+}
 .orbit-dashboard{
   display:grid;
   grid-template-columns:minmax(0,1.58fr) minmax(360px,.72fr);
