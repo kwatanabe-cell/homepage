@@ -596,17 +596,21 @@ body.light-theme .message-photo{border-color:rgba(7,17,31,.16)}
 .orbit-actions{
   grid-area:actions;
   display:flex;
-  align-items:center;
+  align-items:stretch;
   gap:10px;
   justify-content:flex-end;
   min-width:0;
 }
 .orbit-press .media-lang-switch{
+  height:44px;
   border-color:rgba(95,155,190,.45);
   background:rgba(11,24,38,.78);
+  flex:0 0 auto;
 }
 .orbit-press .media-lang-switch button{
   color:#9db4c8;
+  height:34px;
+  align-self:center;
 }
 .orbit-press .media-lang-switch button.active{
   background:#4db0ff;
@@ -624,6 +628,7 @@ body.light-theme .message-photo{border-color:rgba(7,17,31,.16)}
   background:rgba(11,24,38,.82);
   color:#7f93a8;
   font-size:12px;
+  flex:0 1 auto;
 }
 .orbit-search input{
   min-width:0;
