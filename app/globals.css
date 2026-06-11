@@ -12,6 +12,98 @@
   --accent-2:#ff335f;
   --max:1180px;
 }
+
+.orbit-editorial{
+  padding-top:96px;
+  background:#f7f6f1;
+  color:#151515;
+  font-family:"Zen Kaku Gothic New","Noto Sans JP",system-ui,sans-serif;
+  overflow:hidden;
+}
+.orbit-editorial a{color:inherit}
+.op-shell{width:min(1780px,100%);margin-inline:auto;padding-inline:clamp(22px,4vw,54px)}
+.op-topline{background:#111;color:#fff;border-bottom:1px solid rgba(0,0,0,.25)}
+.op-topline .op-shell{display:flex;align-items:center;justify-content:space-between;gap:24px;min-height:52px;font-size:14px}
+.op-topline p{margin:0;font-weight:600;letter-spacing:.05em}
+.op-topline nav{display:flex;align-items:center;gap:20px;white-space:nowrap}
+.op-newsletter{background:#0b6f73;color:#fff;padding:18px 26px;margin-block:-1px;font-weight:700}
+.op-search{font-size:24px;line-height:1}
+.op-brand-row{background:#f7f6f1;border-bottom:1px solid #d8d3ca}
+.op-brand-row .op-shell{display:grid;grid-template-columns:minmax(340px,.68fr) minmax(0,1fr) auto;align-items:center;gap:38px;padding-block:32px}
+.op-brand{display:flex;align-items:center;gap:28px;min-width:0}
+.op-mark{position:relative;width:88px;height:88px;border:2px solid #111;border-radius:50%;flex:0 0 auto}
+.op-mark::before{content:"";position:absolute;right:10px;top:23px;width:9px;height:9px;border-radius:50%;background:#0b7478;box-shadow:15px -8px 0 #0b7478,28px -18px 0 #111}
+.op-logo strong{display:block;font-family:"Noto Serif JP",Georgia,"Times New Roman",serif;font-size:48px;font-weight:500;letter-spacing:.04em;line-height:1}
+.op-logo em{display:block;margin-top:10px;font-family:"Noto Serif JP",Georgia,"Times New Roman",serif;font-style:normal;font-size:15px;letter-spacing:.08em}
+.op-nav{display:flex;align-items:center;justify-content:space-between;gap:18px;font-weight:700}
+.op-nav a{padding:18px 4px;border-bottom:3px solid transparent;white-space:nowrap}
+.op-nav a.active{color:#0b7478;border-bottom-color:#0b7478}
+.op-menu{border:0;background:transparent;color:#111;font-size:30px;line-height:1}
+.op-hero-grid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(360px,.95fr) minmax(320px,.68fr);border-bottom:1px solid #d8d3ca}
+.op-story-copy{padding:44px 32px 34px 28px}
+.op-kicker{margin:0 0 42px;color:#0b7478;font-size:16px;font-weight:700}
+.op-story-copy h1{font-family:"Noto Serif JP",Georgia,"Times New Roman",serif;font-size:clamp(42px,4vw,72px);font-weight:500;line-height:1.35;letter-spacing:.04em;margin:0}
+.op-story-copy .lead{margin:30px 0 0;color:#55504a;font-size:17px;line-height:2}
+.op-tags{display:flex;gap:10px;margin-top:30px}
+.op-tags span{border:1px solid #0b7478;color:#0b7478;padding:6px 14px;font-size:13px;font-weight:700}
+.op-meta{margin-top:22px;color:#55504a;font-size:14px}
+.op-feature-image{position:relative;margin:0;padding:24px 28px;border-right:1px solid #d8d3ca}
+.op-feature-image img{display:block;width:100%;height:100%;min-height:430px;object-fit:cover}
+.op-dots{position:absolute;right:48px;bottom:38px;display:flex;gap:8px}
+.op-dots span{width:9px;height:9px;border-radius:50%;background:#d9d9d9}
+.op-dots span:first-child{background:#0b7478}
+.op-briefing{padding:36px 32px;border-left:1px solid #d8d3ca}
+.op-panel-head{display:flex;align-items:center;justify-content:space-between;gap:20px;margin-bottom:20px}
+.op-panel-head h2{font-family:"Noto Serif JP",Georgia,"Times New Roman",serif;font-size:22px;font-weight:600;margin:0}
+.op-panel-head a{font-size:13px;font-weight:700}
+.op-briefing article{position:relative;border-bottom:1px solid #d8d3ca;padding:15px 28px 15px 0}
+.op-date{display:block;color:#77716a;font-size:13px;margin-bottom:6px}
+.op-category{color:#0b7478;margin-left:12px}
+.op-briefing h3{margin:0;font-size:16px;line-height:1.55;font-weight:700}
+.op-bookmark{position:absolute;right:0;bottom:16px;color:#77716a}
+.op-lower-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(320px,.32fr);gap:0;border-bottom:1px solid #d8d3ca}
+.op-longreads{padding:28px 28px 48px}
+.op-story-cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.op-story-card{position:relative;min-height:260px;padding:22px;color:#fff;display:flex;flex-direction:column;justify-content:flex-end;overflow:hidden}
+.op-story-card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:brightness(.55) saturate(.9)}
+.op-story-card::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.16),rgba(0,0,0,.7))}
+.op-story-card > *:not(img){position:relative;z-index:1}
+.op-story-card small{font-weight:700}
+.op-story-card h3{font-family:"Noto Serif JP",Georgia,"Times New Roman",serif;font-size:26px;line-height:1.4;margin:12px 0}
+.op-story-card p{line-height:1.8;color:rgba(255,255,255,.86)}
+.op-story-card time{margin-top:auto}
+.op-experts{padding:28px 30px 44px;border-left:1px solid #d8d3ca}
+.op-expert{display:grid;grid-template-columns:62px minmax(0,1fr);gap:16px;align-items:center;border-bottom:1px solid #d8d3ca;padding:14px 0}
+.op-expert img{width:62px;height:62px;border-radius:50%;object-fit:cover}
+.op-expert small{color:#0b7478;font-weight:700}
+.op-expert h3{font-size:15px;line-height:1.5;margin:4px 0}
+.op-expert p{margin:0;color:#666;font-size:13px}
+@media (max-width:1100px){
+  .op-brand-row .op-shell{grid-template-columns:1fr;gap:20px}
+  .op-nav{justify-content:flex-start;overflow-x:auto;padding-bottom:8px}
+  .op-hero-grid,.op-lower-grid{grid-template-columns:1fr}
+  .op-feature-image,.op-briefing,.op-experts{border-left:0;border-right:0}
+}
+@media (max-width:700px){
+  .orbit-editorial{padding-top:84px}
+  .op-shell{padding-inline:22px}
+  .op-topline .op-shell{align-items:flex-start;flex-direction:column;padding-block:14px}
+  .op-topline nav{flex-wrap:wrap;gap:10px 14px;white-space:normal}
+  .op-newsletter{padding:8px 12px;margin:0}
+  .op-brand-row .op-shell{padding-block:24px}
+  .op-brand{gap:18px}
+  .op-mark{width:64px;height:64px}
+  .op-logo strong{font-size:34px}
+  .op-logo em{font-size:13px}
+  .op-nav{gap:18px;font-size:14px}
+  .op-story-copy{padding:34px 0}
+  .op-story-copy h1{font-size:clamp(34px,10vw,48px)}
+  .op-feature-image{padding:0}
+  .op-feature-image img{min-height:260px}
+  .op-dots{right:20px;bottom:16px}
+  .op-briefing,.op-longreads,.op-experts{padding-inline:0}
+  .op-story-cards{grid-template-columns:1fr}
+}
 body.light-theme{
   --bg:#f7f9fc;
   --bg-soft:#edf2f7;

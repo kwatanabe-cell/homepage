@@ -7,7 +7,7 @@
   <meta name="description" content="人工衛星に関する記事を発信するKick Space Technologies株式会社のメディアページです。" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@400;500;700;900&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@400;500;700;900&family=Noto+Serif+JP:wght@500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -24,64 +24,100 @@
       <a href="access.html">Access</a>
     </nav>
   </header>
-  <main id="top" class="media-public orbit-press">
-    <section class="orbit-shell">
-      <div class="orbit-topbar">
-        <a class="orbit-brand" href="media.html" aria-label="Orbit Press top">
-          <span class="orbit-mark" aria-hidden="true"><span></span></span>
-          <span><strong>ORBIT PRESS</strong><em>NEWS. SCIENCE. EXPLORATION.</em></span>
-        </a>
-        <nav class="orbit-nav" aria-label="Orbit Press sections">
-          <a href="media.html" data-ja="ニュース" data-en="News">ニュース</a>
-          <a href="media-cubesat.html" data-ja="打上げ" data-en="Launches">打上げ</a>
-          <a href="media-obc.html" data-ja="衛星" data-en="Satellites">衛星</a>
-          <a href="media-eps.html" data-ja="技術解説" data-en="Technology">技術解説</a>
-          <a href="media-ground.html" data-ja="運用" data-en="Operations">運用</a>
+  <main id="top" class="orbit-editorial">
+    <div class="op-topline">
+      <div class="op-shell">
+        <p>小型衛星のいまを、深く、静かに、正確に。</p>
+        <nav aria-label="Orbit Press utility links">
+          <a href="#about">Orbit Pressについて</a>
+          <span>/</span>
+          <a href="#ad">広告掲載</a>
+          <span>/</span>
+          <a href="access.html">お問い合わせ</a>
+          <a class="op-newsletter" href="#newsletter">ニュースレター登録</a>
+          <a class="op-search" href="#search" aria-label="検索">⌕</a>
         </nav>
-        <div class="orbit-actions">
-          <div class="media-lang-switch" aria-label="Language switch">
-            <button type="button" class="active" data-media-lang="ja">JP</button>
-            <button type="button" data-media-lang="en">EN</button>
-          </div>
-          <label class="orbit-search"><span data-ja="検索" data-en="Search">検索</span><input type="search" placeholder="Search Orbit Press..." /></label>
+      </div>
+    </div>
+
+    <section class="op-brand-row" aria-label="Orbit Press masthead">
+      <div class="op-shell">
+        <a class="op-brand" href="media.html" aria-label="Orbit Press top">
+          <span class="op-mark" aria-hidden="true"></span>
+          <span class="op-logo"><strong>Orbit Press</strong><em>小型衛星を専門に伝えるメディア</em></span>
+        </a>
+        <nav class="op-nav" aria-label="Orbit Press sections">
+          <a class="active" href="media.html">トップ</a>
+          <a href="#longreads">特集・連載</a>
+          <a href="media-obc.html">製造・技術</a>
+          <a href="media-eps.html">調達・サプライチェーン</a>
+          <a href="#briefing">政策・制度</a>
+          <a href="#experts">投資・ビジネス</a>
+          <a href="media-cubesat.html">打ち上げ・運用</a>
+          <a href="#events">イベント</a>
+        </nav>
+        <button class="op-menu" type="button" aria-label="メニュー">☰</button>
+      </div>
+    </section>
+
+    <section class="op-shell op-hero-grid">
+      <article class="op-story-copy">
+        <p class="op-kicker">注目のストーリー</p>
+        <h1>小型衛星の「量産化」は<br>どこまで来たのか</h1>
+        <p class="lead">標準化バスの進化、部品の安定調達、試験の自動化。国内外の現場を取材し、小型衛星の量産を支える技術と仕組みの現在地を描く。</p>
+        <div class="op-tags"><span>製造・技術</span><span>特集</span></div>
+        <p class="op-meta">Orbit Press 編集部　|　2026.06.10</p>
+      </article>
+
+      <figure class="op-feature-image">
+        <img src="assets/kitakyushu-manufacturing.png" alt="クリーンルームで組み立てられる小型衛星" />
+        <figcaption class="op-dots" aria-label="スライド位置"><span></span><span></span><span></span><span></span><span></span></figcaption>
+      </figure>
+
+      <aside class="op-briefing" id="briefing">
+        <div class="op-panel-head"><h2>最新ブリーフィング</h2><a href="#briefing">もっと見る 〉</a></div>
+        <article><time class="op-date">2026.06.11 <span class="op-category">政策・制度</span></time><h3>経産省、宇宙産業の国際競争力強化に向けた新たな支援策を公表</h3><span class="op-bookmark">⌑</span></article>
+        <article><time class="op-date">2026.06.11 <span class="op-category">打ち上げ・運用</span></time><h3>イプシロンS、2026年度の打ち上げ計画を発表 — 小型衛星の相乗り機会を拡大</h3><span class="op-bookmark">⌑</span></article>
+        <article><time class="op-date">2026.06.10 <span class="op-category">ビジネス</span></time><h3>Synspective、米国でのSAR衛星データ販売を本格化</h3><span class="op-bookmark">⌑</span></article>
+        <article><time class="op-date">2026.06.10 <span class="op-category">調達・サプライチェーン</span></time><h3>半導体・部材の宇宙グレード調達ガイドライン改訂版を公開</h3><span class="op-bookmark">⌑</span></article>
+        <article><time class="op-date">2026.06.09 <span class="op-category">投資・資金調達</span></time><h3>小型衛星スタートアップの天地人、総額18億円の資金調達を実施</h3><span class="op-bookmark">⌑</span></article>
+      </aside>
+    </section>
+
+    <section class="op-shell op-lower-grid">
+      <div class="op-longreads" id="longreads">
+        <div class="op-panel-head"><h2>特集・ロングリード</h2><a href="#longreads">すべて見る 〉</a></div>
+        <div class="op-story-cards">
+          <article class="op-story-card">
+            <img src="assets/service-mission.png" alt="" />
+            <small>特集</small>
+            <h3>政府調達の現在地と<br>スタートアップの突破口</h3>
+            <p>JAXAや防衛省、自治体の調達動向を整理。参入の鍵となる要件とプロセスを解説する。</p>
+            <time>2026.06.09</time>
+          </article>
+          <article class="op-story-card">
+            <img src="assets/component-power.png" alt="" />
+            <small>レポート</small>
+            <h3>小型衛星のサプライチェーン<br>リスク最前線</h3>
+            <p>地政学、輸出規制、供給制約。調達担当者が押さえるべき論点と対応策をまとめる。</p>
+            <time>2026.06.08</time>
+          </article>
+          <article class="op-story-card">
+            <img src="assets/member-watanabe.png" alt="" />
+            <small>インタビュー</small>
+            <h3>「データの価値を最大化する<br>星座設計とは」</h3>
+            <p>アクセルスペースCTOに聞く、次世代ミッションとオンボード処理の未来。</p>
+            <time>2026.06.07</time>
+          </article>
         </div>
       </div>
 
-      <section class="orbit-status-grid" aria-label="Orbit Press live status">
-        <div class="orbit-status-card is-countdown"><p data-ja="次回の人工衛星打上げ" data-en="Next Satellite Launch">次回の人工衛星打上げ</p><strong>NET JUN 17, 2026</strong><span data-ja="AST SpaceMobile BlueBird 8-10 / SpaceX Falcon 9" data-en="AST SpaceMobile BlueBird 8-10 / SpaceX Falcon 9">AST SpaceMobile BlueBird 8-10 / SpaceX Falcon 9</span><a class="orbit-source-link" href="https://www.marketwatch.com/story/ast-spacemobiles-stock-experiences-rocky-trading-as-spacex-plans-to-launch-its-satellites-into-orbit-331b3c3b" target="_blank" rel="noopener" data-ja="情報元を見る" data-en="View source">情報元を見る</a></div>
-        <div class="orbit-status-card"><p data-ja="打上げ時刻" data-en="Launch Time">打上げ時刻</p><strong data-ja="時刻未発表" data-en="Time TBA">時刻未発表</strong><span data-ja="Cape Canaveral, Florida / 日本時間は発表後更新" data-en="Cape Canaveral, Florida / JST will be updated after release">Cape Canaveral, Florida / 日本時間は発表後更新</span><a class="orbit-source-link" href="https://www.spacex.com/launches/" target="_blank" rel="noopener">SpaceX Launches</a></div>
-        <div class="orbit-status-card"><p data-ja="ミッション概要" data-en="Mission Brief">ミッション概要</p><strong>LEO Direct-to-Cell</strong><span data-ja="BlueBird 8、9、10を低軌道へ投入予定" data-en="BlueBird 8, 9, and 10 are planned for low Earth orbit">BlueBird 8、9、10を低軌道へ投入予定</span><a class="orbit-source-link" href="https://ast-science.com/" target="_blank" rel="noopener">AST SpaceMobile</a></div>
-      </section>
-
-      <section class="orbit-dashboard">
-        <a class="orbit-feature-panel" href="https://www.marketwatch.com/story/ast-spacemobiles-stock-experiences-rocky-trading-as-spacex-plans-to-launch-its-satellites-into-orbit-331b3c3b" target="_blank" rel="noopener">
-          <img src="assets/hero-earth-cubesat.png" alt="" />
-          <div class="orbit-feature-copy">
-            <p class="orbit-tag" data-ja="実打上げピックアップ" data-en="Live Launch Pick">実打上げピックアップ</p>
-            <h1 data-ja="AST SpaceMobile、BlueBird 8-10をFalcon 9で打上げへ。" data-en="AST SpaceMobile BlueBird 8-10 Set for Falcon 9 Launch.">AST SpaceMobile、BlueBird 8-10をFalcon 9で打上げへ。</h1>
-            <p data-ja="2026年6月17日、Cape Canaveralから低軌道へ投入予定。標準スマートフォンと直接つながる衛星通信網の拡張ミッションです。" data-en="Scheduled for June 17, 2026 from Cape Canaveral, the mission will send three direct-to-cell BlueBird satellites to low Earth orbit.">2026年6月17日、Cape Canaveralから低軌道へ投入予定。標準スマートフォンと直接つながる衛星通信網の拡張ミッションです。</p>
-            <span data-ja="情報元を見る" data-en="View Source">情報元を見る</span>
-          </div>
-          <div class="orbit-metrics" aria-label="Mission highlights">
-            <p>MISSION HIGHLIGHTS</p>
-            <dl><div><dt data-ja="打上げ日" data-en="Launch Date">打上げ日</dt><dd>Jun 17, 2026</dd></div><div><dt data-ja="ロケット" data-en="Vehicle">ロケット</dt><dd>Falcon 9</dd></div><div><dt data-ja="射場" data-en="Site">射場</dt><dd>Cape Canaveral</dd></div></dl>
-          </div>
-        </a>
-
-        <aside class="orbit-top-stories">
-          <div class="orbit-panel-head"><h2 data-ja="トップストーリー" data-en="Top Stories">トップストーリー</h2><a href="media.html" data-ja="すべて見る" data-en="View All">すべて見る</a></div>
-          <a href="https://www.marketwatch.com/story/ast-spacemobiles-stock-experiences-rocky-trading-as-spacex-plans-to-launch-its-satellites-into-orbit-331b3c3b" target="_blank" rel="noopener"><img src="assets/component-obc.png" alt="" /><div><p>Launches</p><h3 data-ja="BlueBird 8-10、6月17日にFalcon 9で打上げ予定" data-en="BlueBird 8-10 Scheduled for Falcon 9 on June 17">BlueBird 8-10、6月17日にFalcon 9で打上げ予定</h3><span>MarketWatch / Jun 10, 2026</span></div></a>
-          <a href="https://www.space.com/space-exploration/launches-spacecraft/spacex-starlink-10-35-b1067-ccsfs-asog" target="_blank" rel="noopener"><img src="assets/hero-earth-cubesat.png" alt="" /><div><p>SpaceX</p><h3 data-ja="Falcon 9ブースター、35回目の再使用で記録更新" data-en="Falcon 9 Booster Sets 35-Flight Reuse Record">Falcon 9ブースター、35回目の再使用で記録更新</h3><span>Space.com / Jun 9, 2026</span></div></a>
-          <a href="https://www.spacex.com/launches/" target="_blank" rel="noopener"><img src="assets/service-operation.png" alt="" /><div><p>Schedule</p><h3 data-ja="SpaceX公式Launchesページで最新時刻を確認" data-en="Check SpaceX Launches for the Latest Time">SpaceX公式Launchesページで最新時刻を確認</h3><span>Official link</span></div></a>
-        </aside>
-      </section>
-
-      <section class="orbit-category-grid" aria-label="Orbit Press categories">
-        <a href="media-cubesat.html"><p data-ja="打上げ" data-en="Launches">打上げ</p><img src="assets/kitakyushu-manufacturing.png" alt="" /><h2 data-ja="CubeSatとは何か。1Uから始まる人工衛星設計の基本" data-en="What Is a CubeSat? The Basics Starting from 1U">CubeSatとは何か。1Uから始まる人工衛星設計の基本</h2><span data-ja="すべての打上げ記事へ" data-en="View all launches">すべての打上げ記事へ</span></a>
-        <a href="media-obc.html"><p data-ja="衛星" data-en="Satellites">衛星</p><img src="assets/component-obc.png" alt="" /><h2 data-ja="OBCと衛星コンポーネントの基礎" data-en="OBC and Satellite Component Basics">OBCと衛星コンポーネントの基礎</h2><span data-ja="衛星記事へ" data-en="View satellites">衛星記事へ</span></a>
-        <a href="media-ground.html"><p data-ja="運用" data-en="Operations">運用</p><img src="assets/service-operation.png" alt="" /><h2 data-ja="地上局と運用設計。打上げ後からが本番" data-en="Ground Stations and Operation Design">地上局と運用設計。打上げ後からが本番</h2><span data-ja="運用記事へ" data-en="View operations">運用記事へ</span></a>
-        <a href="media-eps.html"><p data-ja="商業宇宙" data-en="Commercial Space">商業宇宙</p><img src="assets/service-mission.png" alt="" /><h2 data-ja="宇宙利用を事業の選択肢へ変える視点" data-en="Turning Space Utilization into a Business Option">宇宙利用を事業の選択肢へ変える視点</h2><span data-ja="事業記事へ" data-en="View business">事業記事へ</span></a>
-      </section>
+      <aside class="op-experts" id="experts">
+        <div class="op-panel-head"><h2>専門家の視点</h2><a href="#experts">すべて見る 〉</a></div>
+        <article class="op-expert"><img src="assets/member-kato.png" alt="" /><div><small>宇宙政策・安全保障</small><h3>宇宙安全保障と小型衛星の役割</h3><p>久保田 孝博　|　宇宙政策研究者</p></div></article>
+        <article class="op-expert"><img src="assets/member-oho.png" alt="" /><div><small>宇宙法・制度</small><h3>衛星データの利活用をめぐる法的論点</h3><p>宇田 百合恵　|　弁護士（宇宙法）</p></div></article>
+        <article class="op-expert"><img src="assets/member-sano.png" alt="" /><div><small>投資・ファイナンス</small><h3>宇宙スタートアップの評価のポイント</h3><p>松尾 健　|　ベンチャーキャピタリスト</p></div></article>
+      </aside>
     </section>
   </main>
   <footer class="site-footer"><p>© Kick Space Technologies Inc. 2025</p><a href="#top">Back to top</a></footer>
